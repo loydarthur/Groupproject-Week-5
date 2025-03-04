@@ -3,15 +3,10 @@ import "../styles/Checkout.css";
 
 const Checkout = ({ cart, setCart }) => {
   const [formData, setFormData] = useState({
-    fname: "",
-    lname: "",
-    email: "",
-    address: "",
-    csz: "",
     creditnum: "",
     expmonth: "",
     expyear: "",
-    cvv: "",
+    cvv: ""
   });
 
   const total = cart
@@ -21,7 +16,7 @@ const Checkout = ({ cart, setCart }) => {
   const handleChange = (e) => {
     let { name, value } = e.target;
     if (name === "creditnum") {
-      // validate data entry and format as "1234 5678 9012 3456"
+      // Format input as "1234 5678 9012 3456"
       value = value.replace(/\D/g, "").substring(0, 16);
       value = value.replace(/(\d{4})(?=\d)/g, "$1 ").trim();
     }
@@ -40,16 +35,12 @@ const Checkout = ({ cart, setCart }) => {
 
     console.log("Form Data:", formData);
     
+    // Reset the form fields
     setFormData({
-      fname: "",
-      lname: "",
-      email: "",
-      address: "",
-      csz: "",
       creditnum: "",
       expmonth: "",
       expyear: "",
-      cvv: "",
+      cvv: ""
     });
     setCart([]);
   };
@@ -59,20 +50,16 @@ const Checkout = ({ cart, setCart }) => {
       <h1>Checkout</h1>
       <form className="checkout-form" onSubmit={handleSubmit}>
         <h2 className="checkout-total">Your total is ${total}</h2>
-        <h3>Billing Information</h3>
-        <label htmlFor="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" onChange={handleChange} value={formData.fname} />
-        <label htmlFor="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" onChange={handleChange} value={formData.lname} />
-        <label htmlFor="email">Email Address:</label>
-        <input type="email" id="email" name="email" onChange={handleChange} value={formData.email} />
-        <label htmlFor="address">Address:</label>
-        <input type="text" id="address" name="address" onChange={handleChange} value={formData.address} />
-        <label htmlFor="csz">City, State, Zip:</label>
-        <input type="text" id="csz" name="csz" onChange={handleChange} value={formData.csz} />
-        <h3>Credit Card Details</h3>
+        <h3>Payment Information</h3>
         <label htmlFor="creditnum">Credit Card Number:</label>
-        <input type="text" id="creditnum" name="creditnum" onChange={handleChange} value={formData.creditnum} required />
+        <input
+          type="text"
+          id="creditnum"
+          name="creditnum"
+          onChange={handleChange}
+          value={formData.creditnum}
+          required
+        />
         <label htmlFor="expmonth">Expiration Month:</label>
         <select id="expmonth" name="expmonth" onChange={handleChange} value={formData.expmonth}>
           <option value="">Select One</option>
@@ -104,7 +91,14 @@ const Checkout = ({ cart, setCart }) => {
           <option value="2026">2026</option>
         </select>
         <label htmlFor="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" onChange={handleChange} value={formData.cvv} />
+        <input
+          type="text"
+          id="cvv"
+          name="cvv"
+          onChange={handleChange}
+          value={formData.cvv}
+          required
+        />
         <input type="submit" value="Place Order" className="submit-btn" />
       </form>
     </div>
