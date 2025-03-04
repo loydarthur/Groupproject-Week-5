@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.home-page {
+  padding: 2rem;
+  text-align: center;
+}
+
+.home-header {
+  margin-bottom: 1.5rem;
+}
+
+.home-logo {
+  width: 280px;
+  height: 180px;
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,47 @@
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  text-align: left;
+  width: 500px;
+}
+
+.checkout-form input {
+  height: 30px;
+}
+
+.checkout-total {
+  text-align: right;
+}
+
+select {
+  height: 32px;
+}
+
+h3 {
+  margin-top: 15px;
+}
+
+label {
+  margin-top: 5px;
+}
+
+.submit-btn {
+  margin-top: 5px;
+  background-color: #002fff; /* Blue background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Consistent font size */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  background-color: #0056b3; /* Darker blue on hover */
+}

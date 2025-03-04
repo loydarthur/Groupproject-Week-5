@@ -1,0 +1,73 @@
+.cart-item {
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.empty-message {
+  text-align: center;
+}
+
+.cart {
+  padding: 0 10%;
+}
+
+.cart-item h3 {
+  margin: 5px 0;
+}
+
+.cart-item label {
+  margin-right: 10px;
+}
+
+.cart-item input {
+  width: 50px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.cart-item button {
+  padding: 5px 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-item button:hover {
+  background-color: #d90000;
+}
+
+.cart-total {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  color: #007bff;
+}
+
+.checkout-btn:hover {
+  cursor: pointer;
+  background-color: #0056b3; 
+}
+
+.checkout-btn {
+  padding: 12px 24px; 
+  background-color: #002fff; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: background-color 0.3s ease; 
+}
+
+.checkout-btn a {
+  text-decoration-line: none;
+  color: rgb(255, 255, 255);
+}
+
+.checkout-btn-position {
+  text-align: right;
+}
